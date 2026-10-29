@@ -1,6 +1,7 @@
 ---
 title: "你好，世界！"
 published: "2026-10-13"
+description: "多想把世界留在每一天"
 draft: false
 ---
 

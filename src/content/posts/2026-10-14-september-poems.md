@@ -1,6 +1,7 @@
 ---
 title: "二〇二六年九月中旬（组诗）"
 published: "2026-10-14"
+description: "一个普通大学生记录的二〇二六年九月中旬"
 draft: false
 ---
 

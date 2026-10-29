@@ -1,6 +1,9 @@
 ---
 title: "快乐明天"
 published: "2026-10-19"
+description: |-
+  明天真是个有意思的词
+  是第二天呢，还是未来呢
 draft: false
 ---
 
