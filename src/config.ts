@@ -16,13 +16,13 @@ export const siteConfig: SiteConfig = {
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: false,
-		src: "assets/images/demo-banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		enable: true,
+		src: "assets/images/night-city-banner.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
-			enable: false, // Display the credit text of the banner image
-			text: "", // Credit text to be displayed
-			url: "", // (Optional) URL link to the original artwork or artist's page
+			enable: true, // Display the credit text of the banner image
+			text: "Beveer / backiee", // Credit text to be displayed
+			url: "https://backiee.com/wallpaper/moonlit-blue-horizon-above-a-quiet-anime-city-skyline/345274",
 		},
 	},
 	toc: {
@@ -44,7 +44,8 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/demo-avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	// Howl's Moving Castle avatar: https://avatars.alphacoders.com/avatars/view/377487
+	avatar: "assets/images/asfos-avatar.jpg",
 	name: "Asfos",
 	bio: "",
 	links: [],
