@@ -44,8 +44,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	// Artwork by aoikasa_mono: https://twoucan.com/profile/aoikasa_mono
-	// Source: https://pbs.twimg.com/media/Fr0OwxmacAA8A9t.jpg
+	// User-provided Milky Way photograph.
 	avatar: "assets/images/asfos-avatar.jpg",
 	name: "Asfos",
 	bio: "",
