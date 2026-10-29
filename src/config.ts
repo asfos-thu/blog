@@ -44,8 +44,9 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	// Howl's Moving Castle avatar: https://avatars.alphacoders.com/avatars/view/377487
-	avatar: "assets/images/asfos-avatar.jpg",
+	// Original free icon by 508: https://508illustration.com/download/202508001/
+	// Usage terms: https://508illustration.com/freeicon/ (keep the artist's signature).
+	avatar: "assets/images/asfos-avatar.png",
 	name: "Asfos",
 	bio: "",
 	links: [],
