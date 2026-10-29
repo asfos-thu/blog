@@ -34,7 +34,11 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # The build script also generates the Pagefind search index.
-      # Template lint/type checks run separately and do not gate publishing.
+      - name: Check types and code quality
+        run: |
+          pnpm check
+          pnpm exec biome ci ./src
+
       - name: Build Astro and search index
         run: pnpm build
 

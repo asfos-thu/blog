@@ -16,9 +16,9 @@ pnpm version declared in `package.json`, uses Node.js 22, runs `pnpm build`
 (Astro plus the Pagefind search index), and uploads only `dist/` to Pages.
 The workflow can also be started manually from the Actions tab.
 
-The template's **Build and Check** and **Code quality** workflows remain
-independent of deployment. Their existing lint/type errors do not block this
-publishing workflow.
+The deployment workflow runs `pnpm check` and the pinned Biome checks before
+building. **Build and Check** and **Code quality** also run on pull requests.
+All workflows use Node.js 22 and/or the same Biome version as `package.json`.
 
 ## Paths and local checks
 
@@ -34,5 +34,8 @@ pnpm build
 pnpm preview
 ```
 
-Open the preview's `/blog/` path. Check Home, Archive, About, an article,
-search results, `/blog/rss.xml`, and `/blog/sitemap-index.xml`.
+Open the preview's `/blog/` path. With no published articles, the homepage
+shows an empty state and hides search and pagination. Archive and About have
+been removed. Check the homepage, `/blog/rss.xml`, and `/blog/sitemap-index.xml`.
+After adding an article to `src/content/posts/`, also check the article and
+search results. Article metadata needs at least `title` and `published`.

@@ -1,0 +1,67 @@
+media:
+  - name: images
+    label: 图片
+    input: public/uploads
+    output: /blog/uploads
+    extensions: [png, jpg, jpeg, webp, gif, avif]
+  - name: markdown
+    label: 上传 Markdown（需含标题和日期）
+    input: src/content/posts
+    output: /blog/posts
+    extensions: [md]
+    rename: false
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    exclude: [.gitkeep]
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      fields: [title, published, draft]
+      primary: title
+      sort: [published, title]
+      default:
+        sort: published
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: published
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: draft
+        label: 草稿（关闭后公开发布）
+        type: boolean
+        default: true
+      - name: description
+        label: 摘要
+        type: text
+      - name: image
+        label: 封面
+        type: image
+        options:
+          media: images
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: category
+        label: 分类
+        type: string
+      - name: body
+        label: 正文
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+          media: images
