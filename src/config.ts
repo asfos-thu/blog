@@ -44,9 +44,9 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	// Original free icon by 508: https://508illustration.com/download/202508001/
-	// Usage terms: https://508illustration.com/freeicon/ (keep the artist's signature).
-	avatar: "assets/images/asfos-avatar.png",
+	// Artwork by aoikasa_mono: https://twoucan.com/profile/aoikasa_mono
+	// Source: https://pbs.twimg.com/media/Fr0OwxmacAA8A9t.jpg
+	avatar: "assets/images/asfos-avatar.jpg",
 	name: "Asfos",
 	bio: "",
 	links: [],
