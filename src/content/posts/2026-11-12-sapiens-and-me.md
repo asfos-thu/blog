@@ -1,9 +1,8 @@
 ---
-title: "智人与我"
-published: "2026-11-12"
+title: 智人与我
+published: 2026-11-12
 draft: false
 ---
-
 > 「大家的欢舞里蕴藏着宇宙的一切，『生命』一直都是目的，『智慧』才是手段。」  
 > ——《原神》角色突破材料「生长碧翡」
 
@@ -71,4 +70,4 @@ draft: false
 
 智人是我，我是智人。
 
-[^1]: Kersey, A. J., & Cantlon, J. F. (2017). Primitive Concepts of Number and the Developing Human Brain. *Language Learning and Development*, *13*(2), 191–214. https://doi.org/10.1080/15475441.2016.1264878
+[^1]: Kersey, A. J., & Cantlon, J. F. (2017). Primitive Concepts of Number and the Developing Human Brain. *Language Learning and Development*, *13*(2), 191–214. [https://doi.org/10.1080/15475441.2016.1264878](https://doi.org/10.1080/15475441.2016.1264878)
