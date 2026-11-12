@@ -2,6 +2,8 @@
 title: 智人与我
 published: 2026-11-12
 draft: false
+description: 「大家的欢舞里蕴藏着宇宙的一切，『生命』一直都是目的，『智慧』才是手段。」
+image: /blog/uploads/nahida-1.jpg
 ---
 > 「大家的欢舞里蕴藏着宇宙的一切，『生命』一直都是目的，『智慧』才是手段。」  
 > ——《原神》角色突破材料「生长碧翡」
