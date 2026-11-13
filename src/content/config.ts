@@ -12,6 +12,11 @@ const postsCollection = defineCollection({
 			.union([z.date(), z.string().min(1)])
 			.pipe(z.coerce.date())
 			.optional(),
+		publicDomain: z.boolean().optional().default(false),
+		copyrightNotice: z
+			.string()
+			.nullish()
+			.transform((value) => value?.trim() ?? ""),
 		draft: z.boolean().optional().default(false),
 		description: z
 			.string()

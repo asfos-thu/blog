@@ -42,6 +42,13 @@ content:
       - name: author
         label: 作者（留空默认 Asfos）
         type: string
+      - name: publicDomain
+        label: 公有领域作品
+        type: boolean
+        default: false
+      - name: copyrightNotice
+        label: 版权说明（可选）
+        type: text
       - name: draft
         label: 草稿（关闭后公开发布）
         type: boolean
