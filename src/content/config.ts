@@ -3,6 +3,10 @@ import { defineCollection, z } from "astro:content";
 const postsCollection = defineCollection({
 	schema: z.object({
 		title: z.string().min(1),
+		author: z
+			.string()
+			.nullish()
+			.transform((value) => value?.trim() ?? ""),
 		published: z.union([z.date(), z.string().min(1)]).pipe(z.coerce.date()),
 		updated: z
 			.union([z.date(), z.string().min(1)])

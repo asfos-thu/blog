@@ -39,6 +39,9 @@ content:
         required: true
         options:
           format: yyyy-MM-dd
+      - name: author
+        label: 作者（留空默认 Asfos）
+        type: string
       - name: draft
         label: 草稿（关闭后公开发布）
         type: boolean
