@@ -6,6 +6,7 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import { getDir } from "../utils/url-utils";
 import ImageWrapper from "./misc/ImageWrapper.astro";
+import ProperNameTitle from "./misc/ProperNameTitle.astro";
 import PostMetadata from "./PostMeta.astro";
 
 interface Props {
@@ -51,7 +52,7 @@ const { remarkPluginFrontmatter } = await entry.render();
         before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
         before:absolute before:top-[35px] before:left-[18px] before:hidden md:before:block
         ">
-            {title}
+            <ProperNameTitle text={title} terms={entry.data.titleUnderlines} />
             <Icon class="inline text-[2rem] text-[var(--primary)] md:hidden translate-y-0.5 absolute" name="material-symbols:chevron-right-rounded" ></Icon>
             <Icon class="text-[var(--primary)] text-[2rem] transition hidden md:inline absolute translate-y-0.5 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0" name="material-symbols:chevron-right-rounded"></Icon>
         </a>

@@ -1,0 +1,20 @@
+---
+interface Props {
+	text: string;
+	terms?: string[];
+}
+const { text, terms = [] } = Astro.props;
+const names = terms.filter(Boolean).sort((a, b) => b.length - a.length);
+const parts: { text: string; underline: boolean }[] = [];
+let position = 0;
+while (position < text.length) {
+	const name = names.find((term) => text.startsWith(term, position));
+	const length = name?.length ?? 1;
+	parts.push({
+		text: text.slice(position, position + length),
+		underline: !!name,
+	});
+	position += length;
+}
+---
+{parts.map((part) => part.underline ? <u>{part.text}</u> : part.text)}

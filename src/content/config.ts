@@ -3,6 +3,7 @@ import { defineCollection, z } from "astro:content";
 const postsCollection = defineCollection({
 	schema: z.object({
 		title: z.string().min(1),
+		titleUnderlines: z.array(z.string().min(1)).default([]),
 		author: z
 			.string()
 			.nullish()
@@ -35,8 +36,10 @@ const postsCollection = defineCollection({
 
 		/* For internal use */
 		prevTitle: z.string().default(""),
+		prevTitleUnderlines: z.array(z.string()).default([]),
 		prevSlug: z.string().default(""),
 		nextTitle: z.string().default(""),
+		nextTitleUnderlines: z.array(z.string()).default([]),
 		nextSlug: z.string().default(""),
 	}),
 });

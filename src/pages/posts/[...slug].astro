@@ -2,6 +2,7 @@
 import path from "node:path";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
+import ProperNameTitle from "@components/misc/ProperNameTitle.astro";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
@@ -79,7 +80,7 @@ const jsonLd = {
                     md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
                     before:absolute before:top-[0.75rem] before:left-[-1.125rem]
                 ">
-                    {entry.data.title}
+                    <ProperNameTitle text={entry.data.title} terms={entry.data.titleUnderlines} />
                 </div>
             </div>
 
@@ -106,7 +107,7 @@ const jsonLd = {
                 <Content />
             </Markdown>
 
-            {licenseConfig.enable && <License title={entry.data.title} author={entry.data.author} publicDomain={entry.data.publicDomain} copyrightNotice={entry.data.copyrightNotice} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
+            {licenseConfig.enable && <License titleUnderlines={entry.data.titleUnderlines} title={entry.data.title} author={entry.data.author} publicDomain={entry.data.publicDomain} copyrightNotice={entry.data.copyrightNotice} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
 
         </div>
     </div>
@@ -117,7 +118,7 @@ const jsonLd = {
             {entry.data.nextSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center !justify-start gap-4" >
                 <Icon name="material-symbols:chevron-left-rounded" class="text-[2rem] text-[var(--primary)]" />
                 <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
-                    {entry.data.nextTitle}
+                    <ProperNameTitle text={entry.data.nextTitle} terms={entry.data.nextTitleUnderlines} />
                 </div>
             </div>}
         </a>
@@ -126,7 +127,7 @@ const jsonLd = {
            class:list={["w-full font-bold overflow-hidden active:scale-95", {"pointer-events-none": !entry.data.prevSlug}]}>
             {entry.data.prevSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center !justify-end gap-4">
                 <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
-                    {entry.data.prevTitle}
+                    <ProperNameTitle text={entry.data.prevTitle} terms={entry.data.prevTitleUnderlines} />
                 </div>
                 <Icon name="material-symbols:chevron-right-rounded" class="text-[2rem] text-[var(--primary)]" />
             </div>}

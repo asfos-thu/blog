@@ -4,9 +4,11 @@ import { licenseConfig, profileConfig } from "../../config";
 import I18nKey from "../../i18n/i18nKey";
 import { i18n } from "../../i18n/translation";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
+import ProperNameTitle from "./ProperNameTitle.astro";
 
 interface Props {
 	title: string;
+	titleUnderlines?: string[];
 	author?: string;
 	publicDomain?: boolean;
 	copyrightNotice?: string;
@@ -29,7 +31,7 @@ const postUrl = decodeURIComponent(Astro.url.toString());
 ---
 <div class={`relative transition overflow-hidden bg-[var(--license-block-bg)] py-5 px-6 ${className}`}>
     <div class="transition font-bold text-black/75 dark:text-white/75">
-        {title}
+        <ProperNameTitle text={title} terms={Astro.props.titleUnderlines} />
     </div>
     <a href={postUrl} class="link text-[var(--primary)]">
         {postUrl}

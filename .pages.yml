@@ -33,6 +33,10 @@ content:
         label: 标题
         type: string
         required: true
+      - name: titleUnderlines
+        label: 标题中的专名（加下划线）
+        type: string
+        list: true
       - name: published
         label: 发布日期
         type: date
