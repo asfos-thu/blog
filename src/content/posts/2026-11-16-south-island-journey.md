@@ -1,7 +1,7 @@
 ---
 title: "南岛途中"
 published: "2026-11-16"
-description: "一场南岛的雨，一束记忆里的光。"
+description: "我永远记得那一天的雨和光"
 author: "Asfos"
 draft: false
 ---
