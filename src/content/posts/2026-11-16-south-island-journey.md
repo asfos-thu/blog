@@ -1,6 +1,7 @@
 ---
 title: "南岛途中"
 published: "2026-11-16"
+description: "天空一片片亮了起来，大地一片片亮了起来。"
 author: "Asfos"
 draft: false
 ---
